@@ -27,7 +27,8 @@ class blochsphere:
 		t_in,
 		x_in,
 		y_in,
-		z_in
+		z_in,
+		g_in=False
 	):
 		surf_pts=self.surf_pts
 		surf_alpha=self.surf_alpha
@@ -144,7 +145,13 @@ class blochsphere:
 
 		axr.legend()
 		axr.set_xlabel(r'$t$')
-
+		
+		'''
+		if g_in:
+			axrr = fig.add_subplot(1, 3, 3)
+			axrr.plot(t_in, x_in, label=r"$\langle\sigma_x\rangle$")
+		'''
+		
 		'''
 		fig.colorbar(
 			scat,
