@@ -11,10 +11,10 @@ class blochvector:
 	def __init__(
 		self,
 		w0=1.0,
-		B0=10.0,
+		B0=1.0,
 		wB=1,
 		p0=0.0,
-		pf=np.pi/2,
+		pf=10,
 		tmin=0,
 		tmax=10,
 		tpts=400		
@@ -60,8 +60,8 @@ class blochvector:
 		psi0 = tensor(basis(2,0))
 
 
-		H0 = 1/2*w0*sigmaz()
-		H1 = 1/2*B0*sigmax()
+		H0 = -w0*sigmaz()
+		H1 = -B0*sigmax()
 		
 		c_op_list = []
 
