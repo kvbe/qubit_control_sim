@@ -78,9 +78,9 @@ if mode_str=="single":
 	io_B0 = 0.5
 	io_w0 = 2
 	io_wB = 3.981737268
-	io_tmax = 25
-	io_tpts = 4000
-	io_pf = 6.29405
+	io_tmax = 13
+	io_tpts = 400
+	io_pf = 6.294
 	
 	
 	bv.B0 = io_B0

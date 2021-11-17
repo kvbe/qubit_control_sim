@@ -35,7 +35,7 @@ class blochsphere:
 		wf_alpha=self.wf_alpha
 		wf_lw=self.wf_lw
 		
-		fig = plt.figure()
+		fig = plt.figure(figsize=(16, 5))
 
 		axl = fig.add_subplot(1, 2, 1, projection='3d')
 
@@ -152,14 +152,16 @@ class blochsphere:
 			axrr.plot(t_in, x_in, label=r"$\langle\sigma_x\rangle$")
 		'''
 		
-		'''
-		fig.colorbar(
+		
+		cbar= fig.colorbar(
 			scat,
 			ax=axl,
-			aspect=1,
+			#aspect=1,
+			shrink=0.5,
 			location='left'
 		)
-		'''
+		cbar.set_label(r'$t$', rotation=0)
+
 		
 
 		
